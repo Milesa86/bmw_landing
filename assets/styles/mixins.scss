@@ -1,0 +1,29 @@
+@mixin flexContainer() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin button($bg, $color) {
+    background: $bg;
+    color: $color;
+    padding: 11px 24px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+   
+
+    &:hover {
+        background: darken($bg, 3%);
+    }
+
+    &:active {
+        background: darken($bg, 5%);
+    }
+}
+
+@mixin coverBg() {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
