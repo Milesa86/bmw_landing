@@ -8,10 +8,15 @@
 
 .section {
     padding: 45px 0 0 32px;
+    
 
     &_light {
         background: $white;
     }
+
+    @media only screen and (max-width: 500px) {
+        padding-right: 32px;
+     }
 
     &_podcasts {
         padding-bottom: 80px;
@@ -188,9 +193,11 @@
 
 
 
-    @media only screen and (max-width: 1800px) {
-        max-width: 75%;
+    @media only screen and (max-width: 1000px) {
+        max-width: 100%;
     }
+
+   
 
 
     &_image {
@@ -266,6 +273,11 @@
     font-size: 20px;
     line-height: 30px;
     color: $text;
+
+    @media only screen and (max-width: 1000px) {
+        font-size: 12px;
+        padding: 7px 0;
+    }
 }
 
 .models {
@@ -274,10 +286,32 @@
     flex-wrap: wrap;
     gap: 40px;
 
+    @media only screen and (max-width: 1200px) {
+        gap: 16px;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        width: 100%;
+        margin-top:12px;
+    }
+    
+
     &_item {
         background: $text;
         width: calc(100% / 3 - 40px);
         position: relative;
+
+        @media only screen and (max-width: 1200px) {
+            width: calc(100% / 3 - 16px);
+        }
+
+        @media only screen and (max-width: 900px) {
+            width: calc(50% - 16px);
+         }
+
+         @media only screen and (max-width: 500px) {
+            width: 100%;
+         }
 
         &_info {
             @include flexContainer;
@@ -485,6 +519,14 @@
         position: relative;
         cursor: pointer;
 
+        @media only screen and (max-width: 1200px) {
+           height: 250px;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            height: 250px;
+         }
+
         &::before {
             content: "";
             display: block;
@@ -519,6 +561,11 @@
             text-align: center;
             height: 100%;
             @include flexContainer;
+
+            @media only screen and (max-width: 1000px) {
+                font-size: 16px;
+                line-height: 24px;
+             }
         }
     }
 
@@ -543,7 +590,7 @@
                     }
 
                     &:last-child {
-                        flex-grow: 1;
+                        width: 40%;
                     }
                 }
             }
